@@ -1,0 +1,36 @@
+body {
+  background: #ffcf7f
+}
+.container {
+  background: #FFFFFF;
+  width: 1010px;
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px
+}
+.plotarea {
+  border-radius: 5px;
+  margin: auto;
+  width: 1000px
+}
+#tooltip {
+  border: 2px solid black;
+  display: flex;
+  position: absolute;
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+#legend {
+  margin: auto;
+  width: 520px;
+  padding-left: 15px;
+  margin-bottom: -10px
+}
+#legend-text {
+  font-size: 14px;
+  font-weight: bold;
+}
