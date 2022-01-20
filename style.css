@@ -83,3 +83,29 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+
+
+.header3 {
+  padding-top: 5px
+}
+.plotarea3, .header3 {
+  margin: auto;
+  width: 800px;
+  border-radius: 5px;
+}
+.axis3, #legend3 {
+  font-size: 15px;
+  font-weight: bold
+}
+#ylabel3 {
+  font-size: 25px;
+  font-weight: bold
+}
+#tooltip3 {
+  border: 2px solid black;
+  display: flex;
+  position: absolute;
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+}

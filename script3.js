@@ -131,7 +131,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   // y-label
   svg.append('text').
   attr('transform', 'rotate(-90)').
-  attr("id", "ylabel").
+  attr("id", "ylabel3").
   attr('x', -250).
   attr('y', 30).
   text('Time in Minutes');
@@ -141,7 +141,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   svg.append("g").
   attr("transform", "translate(0," + (height - padding) + ")").
   attr("id", "x-axis").
-  attr("class", "axis").
+  attr("class", "axis3").
   call(xAxis);
 
   var yAxis = d3.axisLeft(yScale).
@@ -149,6 +149,6 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   svg.append("g").
   attr("transform", "translate(" + 2 * padding + ",0)").
   attr("id", "y-axis").
-  attr("class", "axis").
+  attr("class", "axis3").
   call(yAxis);
 });
