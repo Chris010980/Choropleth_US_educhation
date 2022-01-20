@@ -1,6 +1,6 @@
 const width3 = 800;
 const height3 = 400;
-const padding = 50;
+const padding3 = 50;
 
 // Time-Formatter and -Parser
 var timeParseYear = d3.timeParse("%Y");
@@ -44,10 +44,10 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   // we have to scale the data
   var xScale = d3.scaleTime().
   domain([xMinOff, xMaxOff]).
-  range([2 * padding, width3 - 0.5 * padding]);
+  range([2 * padding3, width3 - 0.5 * padding3]);
   var yScale = d3.scaleTime().
   domain([yMaxOff, yMinOff]).
-  range([height3 - padding, 0]);
+  range([height3 - padding3, 0]);
 
   // append svg to div with class plotarea
   var svg = d3.select(".plotarea3").
@@ -63,13 +63,13 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   attr('class', 'dot').
   attr('index', (d, i) => i).
   attr("cx", (d, i) => {return xScale(xData[i]);}).
-  attr("cy", (d, i) => {return yScale(yData[i]) + padding;}).
+  attr("cy", (d, i) => {return yScale(yData[i]) + padding3}).
   attr("data-xvalue", (d, i) => {return xData[i];}).
   attr("data-yvalue", (d, i) => {return yData[i];}).
   attr("r", 7).
-  attr("transform", "translate(0," + -padding + ")").
+  attr("transform", "translate(0," + -padding3 + ")").
   attr("width", 1).
-  attr("height", d => {return height3 - yScale(d) - padding;}).
+  attr("height", d => {return height3 - yScale(d) - padding3;}).
   attr("fill", (d, i) => {return dopingData[i] == "" ? "orange" : "blue";})
   // append tooltip
   .on("mouseover", function (e, d) {
@@ -139,7 +139,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   // define x- and y-axis and append it to svg
   var xAxis = d3.axisBottom(xScale);
   svg.append("g").
-  attr("transform", "translate(0," + (height - padding) + ")").
+  attr("transform", "translate(0," + (height3 - padding3) + ")").
   attr("id", "x-axis").
   attr("class", "axis3").
   call(xAxis);
@@ -147,7 +147,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   var yAxis = d3.axisLeft(yScale).
   tickFormat(timeFormatMinSec);
   svg.append("g").
-  attr("transform", "translate(" + 2 * padding + ",0)").
+  attr("transform", "translate(" + 2 * padding3+ ",0)").
   attr("id", "y-axis").
   attr("class", "axis3").
   call(yAxis);
