@@ -126,3 +126,4 @@ d3.json("https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/
 })
 // catch error and print to console
 .catch(err => {console.log(err);});
+
