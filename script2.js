@@ -23,7 +23,7 @@ append("description");
 
 // legend2
 var legend2 = d3.select(".header2").
-append("legend2").
+append("legend").
 attr("height", 0).
 attr("margin-bottom", 0);
 
@@ -71,7 +71,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   "<br/>Base Temperature: " + baseTemp + "°C");
   // append legend2
   legend2.append("text").
-  attr("id", "legend2-text").
+  attr("id", "legend-text").
   text("Temperature Deviation: " + zMin.toFixed(1) + "°C");
 
   legend2.append("svg").
@@ -88,7 +88,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   attr("fill", (d, i) => {var val = zMin + i / zData.length * (zMax - zMin);return colorScale(val);});
 
   legend2.append("text").
-  attr("id", "legend2-text").
+  attr("id", "legend-text").
   text(zMax.toFixed(1) + "°C");
 
   // append rect to svg
