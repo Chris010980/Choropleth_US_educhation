@@ -100,8 +100,8 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   attr('index', (d, i) => i).
   attr("x", (d, i) => {return xScale(xData[i]);}).
   attr("y", (d, i) => {return yScale(yData[i]);}).
-  attr("width", xScale.bandwidth2()).
-  attr("height", yScale.bandwidth2()).
+  attr("width", xScale.bandwidth()).
+  attr("height", yScale.bandwidth()).
   attr("fill", (d, i) => {return myColor(zData[i]);}).
   attr("data-year", (d, i) => {return xData[i];}).
   attr("data-month", (d, i) => {return yData[i] - 1;}).
