@@ -115,7 +115,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
     style("visibility", "visible").
     attr('data-year', xData[index]).
     style("left", xScale(xData[index]) + 300 + "px").
-    style("top", yScale(yData[index]) + 500 + "px");
+    style("top", yScale(yData[index]) + 1000 + "px");
   }).
   on("mouseout", () => {tooltip2.style("visibility", "hidden");});
 
