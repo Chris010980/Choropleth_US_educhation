@@ -92,7 +92,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
       style("visibility", "visible").
       attr('data-year', xData[index]).
       style("left", xScale(xData[index]) + 600 + "px").
-      style("top", height - 200 + "px");
+      style("top", height + 1700 + "px");
     }
   }).
   on("mouseout", () => {
