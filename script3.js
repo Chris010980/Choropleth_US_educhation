@@ -1,5 +1,5 @@
-const width = 800;
-const height = 400;
+const width3 = 800;
+const height3 = 400;
 const padding = 50;
 
 // Time-Formatter and -Parser
@@ -9,9 +9,9 @@ var timeFormatYear = d3.timeFormat("%Y");
 var timeFormatMinSec = d3.timeFormat("%M:%S");
 
 // define tooltip
-var tooltip = d3.select(".plotarea").
+var tooltip3 = d3.select(".plotarea3").
 append("div").
-attr("id", "tooltip").
+attr("id", "tooltip3").
 style("visibility", "hidden").
 style("background-color", "lightsteelblue").
 style("padding", "10px");
@@ -44,16 +44,16 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   // we have to scale the data
   var xScale = d3.scaleTime().
   domain([xMinOff, xMaxOff]).
-  range([2 * padding, width - 0.5 * padding]);
+  range([2 * padding, width3 - 0.5 * padding]);
   var yScale = d3.scaleTime().
   domain([yMaxOff, yMinOff]).
-  range([height - padding, 0]);
+  range([height3 - padding, 0]);
 
   // append svg to div with class plotarea
-  var svg = d3.select(".plotarea").
+  var svg = d3.select(".plotarea3").
   append("svg").
-  attr("width", width).
-  attr("height", height);
+  attr("width", width3).
+  attr("height", height3);
 
   // append rect to svg
   svg.selectAll("circle").
@@ -69,13 +69,13 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
   attr("r", 7).
   attr("transform", "translate(0," + -padding + ")").
   attr("width", 1).
-  attr("height", d => {return height - yScale(d) - padding;}).
+  attr("height", d => {return height3 - yScale(d) - padding;}).
   attr("fill", (d, i) => {return dopingData[i] == "" ? "orange" : "blue";})
   // append tooltip
   .on("mouseover", function (e, d) {
     var index = this.getAttribute('index');
     if (dopingData[index] != "") {
-      tooltip.html("Name: " + nameData[index] +
+      tooltip3.html("Name: " + nameData[index] +
       "<br/>Country: " + nationalityData[index] +
       "<br/>Time: " + timeFormatMinSec(yData[index]) +
       "<br/>Year: " + timeFormatYear(xData[index]) +
@@ -85,7 +85,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
       style("left", xScale(xData[index]) + 600 + "px").
       style("top", height - 200 + "px");
     } else {
-      tooltip.html("Name: " + nameData[index] +
+      tooltip3.html("Name: " + nameData[index] +
       "<br/>Country: " + nationalityData[index] +
       "<br/>Time: " + timeFormatMinSec(yData[index]) +
       "<br/>Year: " + timeFormatYear(xData[index])).
@@ -96,36 +96,36 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
     }
   }).
   on("mouseout", () => {
-    tooltip.style("visibility", "hidden");
+    tooltip3.style("visibility", "hidden");
   });
 
   // append legend (manually as there are only two values)
   svg.append("rect").
-  attr("id", "legend").
-  attr("x", width - 50).
-  attr("y", height / 2 - 50).
+  attr("id", "legend3").
+  attr("x", width3 - 50).
+  attr("y", height3 / 2 - 50).
   attr("fill", "orange").
   attr("width", 25).
   attr("height", 25);
 
   svg.append('text').
-  attr("id", "legend").
-  attr('x', width - 210).
-  attr('y', height / 2 - 33).
+  attr("id", "legend3").
+  attr('x', width3 - 210).
+  attr('y', height3 / 2 - 33).
   text('No Doping Allegations');
 
   svg.append("rect").
-  attr("id", "legend").
-  attr("x", width - 50).
-  attr("y", height / 2 - 90).
+  attr("id", "legend3").
+  attr("x", width3 - 50).
+  attr("y", height3 / 2 - 90).
   attr("fill", "blue").
   attr("width", 25).
   attr("height", 25);
 
   svg.append('text').
-  attr("id", "legend").
-  attr('x', width - 210).
-  attr('y', height / 2 - 72).
+  attr("id", "legend3").
+  attr('x', width3 - 210).
+  attr('y', height3 / 2 - 72).
   text('Doping Allegations');
 
   // y-label
