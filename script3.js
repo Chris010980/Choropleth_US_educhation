@@ -83,7 +83,7 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
       style("visibility", "visible").
       attr('data-year', xData[index]).
       style("left", xScale(xData[index]) + 600 + "px").
-      style("top", height3 + 2000 + "px");
+      style("top", height3 + 1700 + "px");
     } else {
       tooltip3.html("Name: " + nameData[index] +
       "<br/>Country: " + nationalityData[index] +
